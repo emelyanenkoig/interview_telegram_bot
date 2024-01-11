@@ -78,8 +78,10 @@ async def description(message: types.Message, state: FSMContext):
     # User data for staff
     name_of_user = message.from_user.full_name
     user_login = message.from_user.username
-
-    await message.bot.send_message(398928816, text=f'Здравствуйте, появился новый пользователь:\n\n'
+    
+    # Staff id in Telegram
+    #admin_id = '11111111'
+    await message.bot.send_message(admin_id, text=f'Здравствуйте, появился новый пользователь:\n\n'
                                                    f'<b>Логин пользователя:</b>\n'
                                                    f'{user_login}\n\n'
                                                    f'<b>Пользователь:</b>\n'
